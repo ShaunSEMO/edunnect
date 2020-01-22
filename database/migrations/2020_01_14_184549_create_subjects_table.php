@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSchoolOverViewsTable extends Migration
+class CreateSubjectsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,10 @@ class CreateSchoolOverViewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('school_over_views', function (Blueprint $table) {
+        Schema::create('subjects', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('first_language');
-            $table->string('second_language');
-            $table->float('pass_rate', 0, 100);
-            $table->string('level');
-            $table->bigInteger('emis_no');
+            $table->string('name');
             $table->timestamps();
-        
         });
     }
 
@@ -32,6 +27,6 @@ class CreateSchoolOverViewsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('school_over_views');
+        Schema::dropIfExists('subjects');
     }
 }
