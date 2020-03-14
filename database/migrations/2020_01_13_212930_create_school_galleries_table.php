@@ -15,6 +15,7 @@ class CreateSchoolGalleriesTable extends Migration
     {
         Schema::create('school_galleries', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('school_id');
             $table->string('image');
             $table->timestamps();
         });

@@ -15,6 +15,7 @@ class CreateSchoolOverViewsTable extends Migration
     {
         Schema::create('school_over_views', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('school_id');
             $table->string('first_language');
             $table->string('second_language');
             $table->float('pass_rate', 0, 100);

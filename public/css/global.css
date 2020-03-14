@@ -1,0 +1,18 @@
+/* * {
+    border: 1px solid red !important;
+} */
+
+#navbarNav {
+    margin: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.step1 {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+}
